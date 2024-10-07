@@ -29,5 +29,4 @@ int main() {
     printf("The numbers are not equal\n");
     printf("The first number is %s than the second number\n", checkGreater(num1, num2) ? "greater" : "not greater");
   }
-
 }
