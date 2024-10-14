@@ -7,31 +7,57 @@ int main() {
   int choice = 0;
   int randomNumber = rand() % 10 + 1;
 
+  // richiedo all'utente di inserire un numero tra 1 e 10
   printf("Indovina un numero tra 1 e 10: ");
   scanf("%d", &choice);
 
+  /**
+   * Se il numero è uguale al random l'utente ha vinto
+   */
   if (choice == randomNumber) {
     printf("Hai vinto\n");
   } else {
+    /**
+     * L'utente ha sbagliato, quindi devo informare l'utente se il numero è
+     * troppo alto o troppo basso
+     */
     if (randomNumber < choice) {
       printf("Il numero inserito è troppo alto\n");
     } else {
       printf("Il numero inserito è troppo basso\n");
     }
+    /**
+     * Richiedo il numero all'utente nel secondo tentativo
+     */
     printf("Indovina un numero tra 1 e 10: ");
     scanf("%d", &choice);
 
+    /**
+     * Se il numero è uguale al random l'utente ha vinto
+     */
     if (choice == randomNumber) {
       printf("Hai vinto\n");
     } else {
+      /**
+       * L'utente ha sbagliato, quindi devo informare l'utente se il numero è
+       * troppo alto o troppo basso
+       */
       if (randomNumber < choice) {
         printf("Il numero inserito è troppo alto\n");
       } else {
         printf("Il numero inserito è troppo basso\n");
       }
+      /**
+       * Richiedo il numero all' utente nel terzo
+       * e ultimo tentativo
+       */
       printf("Indovina un numero tra 1 e 10: ");
       scanf("%d", &choice);
 
+      /**
+       * Se il numero è uguale al random l'utente ha vinto
+       * Se l'utente perde lo si avvisa di aver finito i tentativi
+       */
       if (choice == randomNumber) {
         printf("Hai vinto\n");
       } else {
